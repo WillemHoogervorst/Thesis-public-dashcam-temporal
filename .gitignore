@@ -148,7 +148,6 @@ mock.py
 models/model.pth
 gitkey
 videoprocessgpu_key
-youtube*
 notes.txt
 nohup.out
 Benchmarks*

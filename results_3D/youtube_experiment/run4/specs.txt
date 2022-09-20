@@ -1,0 +1,5 @@
+run4
+3D CNN
+full dataset
+28 frames
+model.pth from run3

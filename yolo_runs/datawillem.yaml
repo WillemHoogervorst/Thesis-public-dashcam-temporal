@@ -1,0 +1,8 @@
+train: ./iamlab-dashcam-temporal/data/yolo_snap_resized_subset_balanced/train
+val: ./iamlab-dashcam-temporal/data/yolo_snap_resized_subset_balanced/test
+nc: 4
+names: ['Give way',
+'Speed Limit',
+'Keep Left/Right',
+'Stoplicht'
+]

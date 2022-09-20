@@ -1,0 +1,3 @@
+Dataset bestaat uit 444 images, evenredig verdeeld over de vier klasses.
+Dataset komt overeen met de data die beschikbaar is voor het trainen van het temporele netwerk.
+Zie opt.yaml voor parameters.

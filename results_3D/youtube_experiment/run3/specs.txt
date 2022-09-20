@@ -1,0 +1,6 @@
+run 3
+4D CNN
+full dataset
+28 sets of frames
+stride 2, length 7, ROI 1.5
+model.pth from run11

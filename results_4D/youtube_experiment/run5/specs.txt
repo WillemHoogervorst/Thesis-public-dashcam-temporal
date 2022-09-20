@@ -1,0 +1,5 @@
+run5
+3D CNN
+dataset without excluded images
+22 frames
+model.pth from run3
