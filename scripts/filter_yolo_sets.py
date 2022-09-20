@@ -1,9 +1,9 @@
 import os
 import shutil
 
-VIDEOFILES = "data/folkert_miniset_snap_resized_subset_balanced/"
+VIDEOFILES = "data/"
 OUTPUTFOLDER = "data/yolo_snap_resized_subset_balanced/"
-SOURCE_PATH = "data/folkert_miniset/"
+SOURCE_PATH = "data/"
 
 def label_mapper(l):
         if l in [0,1]: # give way & speed limit

@@ -10,7 +10,7 @@ import shutil
 ### TO DO: ###
 # Make most frequent classes dynamic: replace static 1 & 6
 
-filedir = "data/folkert_miniset"
+filedir = ""
 
 def update_dict(dict: dict, key, value=1):
     if key in dict.keys():
@@ -59,7 +59,7 @@ def resize_images(filenames, dim, imageset):
     for filename, cl in filenames:
         img = cv2.imread(f'{filedir}/{imageset}/{filename}', cv2.IMREAD_UNCHANGED)
         resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
-        cv2.imwrite(f'data/folkert_miniset_resized/{imageset}/{filename}', resized)
+        cv2.imwrite(f'data/{imageset}/{filename}', resized)
         classes.append(cl)
     return classes
 
@@ -77,7 +77,7 @@ def snap_from_image_bounding_box(imageset, dim):
         return max(int(x), 0)
     classes = []
     set_dir = f"{filedir}/{imageset}"
-    create_dir = f'data/folkert_miniset_snap_resized/{imageset}/'
+    create_dir = f'data/{imageset}/'
     os.makedirs(create_dir, exist_ok=True)
     for f in os.listdir(set_dir):
         if f.endswith("txt"):
@@ -160,16 +160,16 @@ if __name__ == '__main__':
     print(countdict, sum(countdict.values())) # 
 
     # for imageset in ['train', 'test']:
-    #     create_subset(classes, 'data/folkert_miniset_snap_resized', 'data/folkert_miniset_snap_resized_subset_balanced', imageset, countdict, balance=True)
+    #     create_subset(classes, 'data', 'data', imageset, countdict, balance=True)
     #     continue
     #     filenames = extract_classlabels(imageset, classes) # ['namestring.png', class]
     #     # Y = resize_images(filenames, (160,160), imageset)
     #     Y = snap_from_image_bounding_box(imageset, (160,160))
     #     mode_Y = mode(Y)
     #     print(f'Most common {imageset} class: {mode_Y} with {Y.count(mode_Y)}/{len(Y)} occurrences')
-    #     # with open(f'data/folkert_miniset_resized/labels/{imageset}_classes.csv', 'w', newline='') as csv_1:
-    #     os.makedirs(f'data/folkert_miniset_snap_resized/labels/', exist_ok=True)
-    #     with open(f'data/folkert_miniset_snap_resized/labels/{imageset}_classes.csv', 'w+', newline='') as csv_1:
+    #     # with open(f'data/labels/{imageset}_classes.csv', 'w', newline='') as csv_1:
+    #     os.makedirs(f'data/labels/', exist_ok=True)
+    #     with open(f'data/labels/{imageset}_classes.csv', 'w+', newline='') as csv_1:
     #         csv_out = csv.writer(csv_1)
     #         csv_out.writerows([Y[index]] for index in range(0, len(Y)))
     #     print(f"# extracted {imageset} files: {len(filenames)}")

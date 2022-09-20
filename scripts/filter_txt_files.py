@@ -5,7 +5,7 @@ import numpy
 
 # VIDEOFILES = os.listdir("../../data/trainingdata_temporal")
 OUTPUTFOLDER = "data\\trainingdata_temporal\\labels"
-SOURCE_PATHS = ["data\\folkert_miniset\\train", "data\\folkert_miniset\\test"]
+SOURCE_PATHS = ["data\\train", "data\\test"]
 ORIGINAL_CLASSES = [0,1,4,5,8]
 CLASS_MAP = {0:0, 1:1, 4:2, 5:2, 8:3} # {k:v} = original:new labels
 FORMAT = ['%i', '%.9f', '%.9f', '%.9f', '%.9f']

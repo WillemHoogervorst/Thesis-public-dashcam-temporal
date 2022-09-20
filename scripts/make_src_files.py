@@ -9,7 +9,7 @@ def sorted_nicely( l ):
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
     return sorted(l, key = alphanum_key)
 
-LABELFOLDERS = ["data\\trainingdata_temporal\\labels2\\labels", "data\\folkert_miniset\\train", "data\\folkert_miniset\\test"]
+LABELFOLDERS = ["data\\trainingdata_temporal\\labels2\\labels", "data\\train", "data\\test"]
 OUTPUTFOLDER = "data\\src_files"
 SOURCE_PATH = "data\\trainingdata_temporal\\temporal_frames\\stride2_window14"
 
