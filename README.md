@@ -15,6 +15,7 @@ pip install -r requirements.txt
 3.  Data
 ```
 Google 'Yolo annotation' to find out how to annotate the data before preprocessing.
+Preprocessing for the 4D CNN is done using a script: ~/scripts/make_temporal_set.py
 During preprocessing, images become 160 x 160 px. Labels should be a single line with a class label and xywh bbox coordinates.
 ```
 
