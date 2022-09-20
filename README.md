@@ -1,8 +1,9 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Code used in the Thesis written by Willem Hoogervorst, between 01/04/2022 - 29/09/2022.
+Contains two Convolutional Neural Networks: a 3D CNN and a 4D CNN.
+Used to compare the performance for models with and without using temporal information fusion.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Installation process
 ```
 git clone
@@ -12,6 +13,10 @@ git clone
 pip install -r requirements.txt
 ```
 3.  Data
+```
+Google 'Yolo annotation' to find out how to annotate the data before preprocessing.
+During preprocessing, images become 160 x 160 px. Labels should be a single line with a class label and xywh bbox coordinates.
+```
 
 4.  Run training
 ```
@@ -24,14 +29,3 @@ watch -n1 nvidia-smi        # watch gpu
 htop                        # watch cpu
 column -s, -t < loss.csv | less -#2 -N -S # read loss.csv from results
 ```
-
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
