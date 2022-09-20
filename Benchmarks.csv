@@ -1,0 +1,26 @@
+Network,ch,input,nc,ep,lf,opt,lr,acc,loss,p0,p1,p2,p3,p4,p5,p6,p7,p8
+# Network: backbone, neck, head specification
+# ch: number of input channels (64=yolov5l)
+# input: size of input images in px
+# nc: number of classes
+# ep: number of epochs
+# acc: Test set prediction accuracy after final epoch
+# loss: Average loss of final epoch
+# p0...8: total predictions per class
+yolo+Linearhead1,32,160x160snap,9,30,CE,SGD,1e-3,42.0,1.974411,,,,,,,,,
+yolo+Linearhead1,32,160x160snap,9,10,CE,SGD,1e-3,35.8,2.013515,,,,,,,,,
+yolo+Linearhead1,32,160x160snap,9,10,CE,SGD,1e-3,21.9,2.138568,120,0,8,25,12,0,100,0,0
+yolo+concats+Linearhead1,32,160x160snap_balanced,4,10,CE,SGD,1e-2,34.4 (max 58.7),1.362774,114,0,0,75,,,,,
+yolo+concats+Linearhead1,32,160x160snap_balanced,4,10,CE,SGD,1e-3,48.1,1.376292,43,143,0,3,,,,,
+yolo+concats+Linearhead1,32,160x160snap_balanced,4,30,CE,SGD,1e-2,30.7 (max 68.8),1.322510 (min 1.203637),78,0,60,51,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,30,CE,SGD,1e-2,43.9 (max 45.5),1.386297 (min 1.386294),6,146,26,11,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,30,CE,SGD,1e-3,21.7 (max 30.2),1.386294 (min 1.386294),116,33,23,17,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,30,NLL,SGD,1e-2,45.0 (max 48.1),4.142461,18,120,20,31,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,30,NLL,SGD,1e-2-3,21.7 (max 35.4),4.142450,3,8,148,35,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,100,NLL,SGD,1e-2-3,56.1 (max 57.1),4.141755,7,139,0,43,,,,,
+yolo+concats+Linearhead2,64,160x160snap_balanced,4,90,NLL,SGD,1e-2-3,23.8 (max 24.3),4.137717,,,,,,,,,
+yolo+concats+Linearhead2,16,160x160snap_balanced,4,100,NLL,SGD,1e-2-3,21.7 (max 24.3),4.141876,4,14,128,43,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,100,NLL,AdaG,1e-2-3,66.7 (max 68.3),4.255235,47,59,27,56,,,,,
+yolo+concats+Linearhead2,32,160x160snap_balanced,4,100,NLL,AdaG,1e-3-4,87.8 (max 88.4),3.472060,32,94,19,44,,,,,
+yolo+concats+Linearhead2,16,160x160snap_balanced,4,100,NLL,AdaG,1e-3-4,72.5 (max 74.6),3.703147,47,84,23,35,,,,,
+yolo+concats+Linearhead2,16,160x160snap_balanced,4,100,NLL,AdaG,1e-3-4,72.5,4.041786,42,85,25,37,,,,,
